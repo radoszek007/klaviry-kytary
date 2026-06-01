@@ -1,9 +1,17 @@
 export const site = {
   name: "Klavíry & Kytary",
   url: "www.klaviry-kytary.cz",
-  email: "info@klaviry-kytary.cz",
-  phone: "+420 XXX XXX XXX",
-  address: "bude doplněna"
+  email: "info@allprosys.cz",
+  address: "Zámostní 1155/27, 710 00 Ostrava"
+};
+
+export const legalEntity = {
+  name: "Allprosys.cz s.r.o.",
+  address: "Zámostní 1155/27, 710 00 Ostrava",
+  companyId: "06365329",
+  vatId: "CZ06365329",
+  description:
+    "Projekt Klavíry & Kytary je pro obchodní, fakturační a smluvní účely zastřešen společností Allprosys.cz s.r.o. Samotná komunikace a výběr nástroje probíhá pod značkou Klavíry & Kytary."
 };
 
 export const navItems = [

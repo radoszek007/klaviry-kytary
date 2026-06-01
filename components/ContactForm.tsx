@@ -1,18 +1,6 @@
-"use client";
-
-import { type FormEvent, useState } from "react";
-import { instrumentTypes, site, useCases } from "@/lib/content";
+import { instrumentTypes, legalEntity, site, useCases } from "@/lib/content";
 
 export default function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    if (event.currentTarget.action.includes("FORM_ID")) {
-      event.preventDefault();
-      setSubmitted(true);
-    }
-  }
-
   return (
     <section id="kontakt" className="bg-ivory py-20 text-ink sm:py-24">
       <div className="section-shell">
@@ -28,22 +16,26 @@ export default function ContactForm() {
               <a href={`mailto:${site.email}`} className="mt-3 block font-semibold text-ink">
                 {site.email}
               </a>
-              <p className="mt-2 text-charcoal/70">{site.phone}</p>
-              <p className="mt-2 text-charcoal/70">Adresa: {site.address}</p>
+            </div>
+
+            <div className="mt-5 rounded-[0.5rem] border border-brass/25 bg-white p-5 shadow-card">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-wood">Právní a fakturační zázemí</p>
+              <p className="mt-3 leading-7 text-charcoal/[0.76]">{legalEntity.description}</p>
+              <div className="mt-4 grid gap-1 text-sm leading-6 text-charcoal/[0.76]">
+                <p className="font-semibold text-ink">{legalEntity.name}</p>
+                <p>{legalEntity.address}</p>
+                <p>IČ: {legalEntity.companyId}</p>
+                <p>DIČ: {legalEntity.vatId}</p>
+              </div>
             </div>
           </div>
 
           <form
-            action="https://formspree.io/f/FORM_ID"
+            action="https://formspree.io/f/xqejjzqg"
             method="POST"
             className="rounded-[0.5rem] border border-ink/10 bg-white p-5 shadow-card sm:p-7"
-            onSubmit={handleSubmit}
           >
-            {submitted ? (
-              <div className="mb-5 rounded-[0.5rem] border border-brass/35 bg-brass/10 p-4 leading-7 text-charcoal">
-                Děkujeme. Pokud je ve Formspree doplněné skutečné ID formuláře, poptávka se odešle ke zpracování. Aktuálně je připravený placeholder pro pozdější napojení.
-              </div>
-            ) : null}
+            <input type="hidden" name="_subject" value="Nová poptávka z webu Klavíry & Kytary" />
 
             <div className="grid gap-4 sm:grid-cols-2">
               <label className="grid gap-2 text-sm font-bold text-ink">
@@ -53,10 +45,6 @@ export default function ContactForm() {
               <label className="grid gap-2 text-sm font-bold text-ink">
                 E-mail
                 <input name="email" type="email" required autoComplete="email" className="min-h-12 rounded-[0.5rem] border border-ink/15 bg-ivory/[0.55] px-4 text-ink outline-none transition focus:border-brass focus:ring-4 focus:ring-brass/15" />
-              </label>
-              <label className="grid gap-2 text-sm font-bold text-ink">
-                Telefon
-                <input name="telefon" type="tel" autoComplete="tel" className="min-h-12 rounded-[0.5rem] border border-ink/15 bg-ivory/[0.55] px-4 text-ink outline-none transition focus:border-brass focus:ring-4 focus:ring-brass/15" />
               </label>
               <label className="grid gap-2 text-sm font-bold text-ink">
                 Typ nástroje

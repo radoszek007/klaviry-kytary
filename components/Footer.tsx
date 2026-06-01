@@ -1,4 +1,4 @@
-import { site } from "@/lib/content";
+import { legalEntity, site } from "@/lib/content";
 
 export default function Footer() {
   return (
@@ -23,13 +23,15 @@ export default function Footer() {
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brass">Kontakt</p>
             <div className="mt-4 grid gap-2 leading-7 text-ivory/[0.78]">
               <a href={`mailto:${site.email}`}>E-mail: {site.email}</a>
-              <p>Telefon: {site.phone}</p>
-              <p>Adresa: {site.address}</p>
+              <p>{site.address}</p>
             </div>
           </div>
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brass">Právní informace</p>
-            <div className="mt-4 grid gap-2 font-semibold text-ivory/[0.78]">
+            <div className="mt-4 grid gap-2 text-ivory/[0.78]">
+              <p className="font-semibold">{legalEntity.name}</p>
+              <p>IČ: {legalEntity.companyId}</p>
+              <p>DIČ: {legalEntity.vatId}</p>
               <a href="#">Ochrana osobních údajů</a>
               <a href="#">Obchodní podmínky / informace pro zákazníky</a>
               <a href="#">Cookies</a>
