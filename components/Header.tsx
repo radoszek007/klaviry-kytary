@@ -12,7 +12,7 @@ export default function Header() {
         aria-label="Hlavní navigace"
         className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-ivory/[0.18] bg-ink/[0.78] px-4 py-3 text-ivory shadow-[0_16px_50px_rgba(0,0,0,0.28)] backdrop-blur-xl lg:px-5"
       >
-        <a href="#" aria-label="Klavíry & Kytary úvod" className="flex min-w-0 items-center gap-3">
+        <a href="/" aria-label="Klavíry & Kytary úvod" className="flex min-w-0 items-center gap-3">
           <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-brass/[0.55] bg-brass/15 font-display text-xl text-brass">
             K
           </span>
@@ -34,7 +34,7 @@ export default function Header() {
           ))}
         </div>
 
-        <a href="#kontakt" className="hidden rounded-full bg-brass px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-[#d3a05b] lg:inline-flex">
+        <a href="/#kontakt" className="hidden rounded-full bg-brass px-4 py-2.5 text-sm font-bold text-ink transition hover:bg-[#d3a05b] lg:inline-flex">
           Nezávazná poptávka
         </a>
 
@@ -67,7 +67,7 @@ export default function Header() {
                 {item.label}
               </a>
             ))}
-            <a href="#kontakt" onClick={() => setIsOpen(false)} className="mt-2 rounded-2xl bg-brass px-4 py-3 text-center text-sm font-bold text-ink">
+            <a href="/#kontakt" onClick={() => setIsOpen(false)} className="mt-2 rounded-2xl bg-brass px-4 py-3 text-center text-sm font-bold text-ink">
               Nezávazná poptávka
             </a>
           </div>

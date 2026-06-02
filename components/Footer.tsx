@@ -13,10 +13,10 @@ export default function Footer() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.2em] text-brass">Odkazy</p>
             <div className="mt-4 grid gap-2 font-semibold text-ivory/[0.78]">
-              <a href="#piana">Piana</a>
-              <a href="#kytary">Kytary</a>
-              <a href="#znacky">Značky</a>
-              <a href="#kontakt">Kontakt</a>
+              <a href="/#piana">Piana</a>
+              <a href="/#kytary">Kytary</a>
+              <a href="/#znacky">Značky</a>
+              <a href="/#kontakt">Kontakt</a>
             </div>
           </div>
           <div>
@@ -32,9 +32,9 @@ export default function Footer() {
               <p className="font-semibold">{legalEntity.name}</p>
               <p>IČ: {legalEntity.companyId}</p>
               <p>DIČ: {legalEntity.vatId}</p>
-              <a href="#">Ochrana osobních údajů</a>
-              <a href="#">Obchodní podmínky / informace pro zákazníky</a>
-              <a href="#">Cookies</a>
+              <a href="/ochrana-osobnich-udaju">Ochrana osobních údajů</a>
+              <a href="/obchodni-podminky">Obchodní podmínky / informace pro zákazníky</a>
+              <a href="/cookies">Cookies</a>
             </div>
           </div>
         </div>

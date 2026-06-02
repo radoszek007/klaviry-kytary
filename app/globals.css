@@ -75,4 +75,28 @@ textarea {
   .light-panel {
     @apply border border-ink/10 bg-cream text-ink shadow-card;
   }
+
+  .legal-content {
+    @apply text-base leading-8 text-charcoal/[0.82];
+  }
+
+  .legal-content h2 {
+    @apply mt-10 font-display text-3xl font-semibold leading-tight text-ink first:mt-0;
+  }
+
+  .legal-content h3 {
+    @apply mt-7 font-display text-2xl font-semibold leading-tight text-ink;
+  }
+
+  .legal-content p {
+    @apply mt-4;
+  }
+
+  .legal-content ul {
+    @apply mt-4 list-disc space-y-2 pl-6;
+  }
+
+  .legal-content a {
+    @apply font-semibold text-wood underline decoration-brass/40 underline-offset-4 transition hover:text-brass;
+  }
 }

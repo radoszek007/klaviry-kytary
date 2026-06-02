@@ -81,7 +81,12 @@ export default function ContactForm() {
 
             <label className="mt-5 flex gap-3 text-sm leading-6 text-charcoal/[0.82]">
               <input name="souhlas" type="checkbox" required className="mt-1 h-4 w-4 shrink-0 accent-brass" />
-              <span>Souhlasím se zpracováním údajů za účelem vyřízení poptávky.</span>
+              <span>
+                Beru na vědomí zpracování osobních údajů za účelem vyřízení poptávky podle{" "}
+                <a href="/ochrana-osobnich-udaju" className="font-semibold text-wood underline decoration-brass/40 underline-offset-4 transition hover:text-brass">
+                  zásad ochrany osobních údajů
+                </a>.
+              </span>
             </label>
 
             <button type="submit" className="button-primary mt-6 w-full sm:w-auto">

@@ -15,12 +15,12 @@ export const legalEntity = {
 };
 
 export const navItems = [
-  { label: "Piana", href: "#piana" },
-  { label: "Kytary", href: "#kytary" },
-  { label: "Značky", href: "#znacky" },
-  { label: "Pro koho", href: "#pro-koho" },
-  { label: "Jak vybíráme", href: "#jak-vybirame" },
-  { label: "Kontakt", href: "#kontakt" }
+  { label: "Piana", href: "/#piana" },
+  { label: "Kytary", href: "/#kytary" },
+  { label: "Značky", href: "/#znacky" },
+  { label: "Pro koho", href: "/#pro-koho" },
+  { label: "Jak vybíráme", href: "/#jak-vybirame" },
+  { label: "Kontakt", href: "/#kontakt" }
 ];
 
 export const trustBullets = [
